@@ -12,6 +12,10 @@ https://huggingface.co/docs/transformers/v4.15.0/parallelism
 <img src="mp.assets/tf32_bf16_float32.png" width="60%">
 </div>
 
+### DataParallel
+- Ring-Reduce
+
+
 ### ZeRO       
 - Data Parallel
 

@@ -1,6 +1,6 @@
 # Representation
 
-* [ConvNext](https://arxiv.org/abs/2201.03545)
+### [ConvNext](https://arxiv.org/abs/2201.03545)
 
 <div align="center">
 <img src="representation.assets/convnext_result.png" width="50%">
@@ -13,7 +13,7 @@
 - Macro design: 
   - Conv block: [3, 4, 6, 3] -> [3, 3, 9, 3] (adapted from Swin Transformer), acc 78.8% -> 79.4%
   - Patchify layer kernel_size=7, stride=2 -> kernel_size=4, stride=4 (adapted from Swin Transformer, changed it to \ 
-   nonoverlap 4x4 patches), acc 79.4% -> 79.5%
+   non-overlap 4x4 patches), acc 79.4% -> 79.5%
     (suggested that the stem cell can be substituted with a simpler 'patchify' layer like in ViT)
   - Used depth-wise conv with same channel number 96 instead of 65, acc -> 80.5%, FLOPS increased to 5.3G
   - BottleNeck -> inverted BottleNeck acc: 80.5% -> 80.6%, FLOPS increased to 4.6G
@@ -30,8 +30,13 @@
   acc: 80.6% -> 81.3%
   - Fewer normalization layers: the reason is the same as the activation function. acc: 81.3% - 81.4%
   - Substitute BN with LN: same reason. acc: 81.4% -> 81.5% ( # TODO: ?why)
-  - Separate downsampling layers: in Swin transformer, a downsampling layer is added between stages. Plus they found adding \ 
-  normalization layers wherever spatial resolution is changed can stablize training. 
+  - Separate down-sampling layers: in Swin transformer, a down-sampling layer is added between stages. Plus they found adding \ 
+  normalization layers wherever spatial resolution is changed can stabilize training. 
   acc: 81.5% -> 82.0%
   - 
   - 
+
+### [EVA](https://arxiv.org/pdf/2211.07636.pdf)
+<div align="center">
+<img src="representation.assets/eva.png" width="60%">
+</div>
